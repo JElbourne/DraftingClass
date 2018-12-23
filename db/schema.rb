@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_12_17_053123) do
+ActiveRecord::Schema.define(version: 2018_12_23_210720) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -77,6 +77,21 @@ ActiveRecord::Schema.define(version: 2018_12_17_053123) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "purchases", force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "course_id"
+    t.string "stripe_charge_id"
+    t.integer "amount_in_cents"
+    t.string "card_last4"
+    t.integer "card_exp_month"
+    t.integer "card_exp_year"
+    t.string "card_type"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["course_id"], name: "index_purchases_on_course_id"
+    t.index ["user_id"], name: "index_purchases_on_user_id"
+  end
+
   create_table "services", force: :cascade do |t|
     t.bigint "user_id"
     t.string "provider"
@@ -118,6 +133,8 @@ ActiveRecord::Schema.define(version: 2018_12_17_053123) do
 
   add_foreign_key "lesson_links", "lessons"
   add_foreign_key "lessons", "courses"
+  add_foreign_key "purchases", "courses"
+  add_foreign_key "purchases", "users"
   add_foreign_key "services", "users"
   add_foreign_key "students", "courses"
   add_foreign_key "students", "users"
