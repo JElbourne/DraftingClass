@@ -1,5 +1,5 @@
 {
-  "name": "JayElbourne",
+  "name": "DraftingClass",
   "private": true,
   "dependencies": {
     "@rails/webpacker": "3.5"
