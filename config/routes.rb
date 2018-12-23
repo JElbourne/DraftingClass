@@ -1,6 +1,13 @@
 require 'sidekiq/web'
 
 Rails.application.routes.draw do
+  resources :lesson_links
+  
+  resources :courses do
+    resources :lessons, only: [:new, :create]
+  end
+  resources :lessons, only: [:show, :index, :edit, :update, :destroy]
+
   namespace :admin do
       resources :users
       resources :announcements

@@ -1,0 +1,26 @@
+<div class="page-header">
+  <%= link_to lessons_path, class: 'btn btn-default' do %>
+    <span class="glyphicon glyphicon-list-alt"></span>
+    All Lessons
+  <% end %>
+  <%= link_to edit_lesson_path(@lesson), class: 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-pencil"></span>
+    Edit
+  <% end %>
+  <h1>Show lesson</h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt>Course:</dt>
+  <dd><%= @lesson.course %></dd>
+
+  <dt>Title:</dt>
+  <dd><%= @lesson.title %></dd>
+
+  <dt>Transcript:</dt>
+  <dd><%= @lesson.transcript %></dd>
+
+  <dt>Video url:</dt>
+  <dd><%= @lesson.video_url %></dd>
+
+</dl>

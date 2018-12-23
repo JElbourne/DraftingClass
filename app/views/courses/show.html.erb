@@ -1,0 +1,42 @@
+<div class="page-header">
+  <%= link_to courses_path, class: 'btn btn-default' do %>
+    <span class="glyphicon glyphicon-list-alt"></span>
+    All Courses
+  <% end %>
+  <%= link_to edit_course_path(@course), class: 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-pencil"></span>
+    Edit
+  <% end %>
+  <h1>Show course</h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt>Name:</dt>
+  <dd><%= @course.name %></dd>
+
+  <dt>Description:</dt>
+  <dd><%= @course.description %></dd>
+
+  <dt>Price:</dt>
+  <dd><%= @course.price %></dd>
+
+  <dt>Discount:</dt>
+  <dd><%= @course.discount %></dd>
+
+</dl>
+
+<div class="row">
+  <div class="col-sm-6">
+    <h1>Lessons</h1>
+  </div>
+
+  <div class="col-sm-6 text-right">
+    <% if is_admin? %>
+      <%= link_to new_course_lesson_path(@course.id), class: 'btn btn-primary' do %>
+        Add New Lesson
+      <% end %>
+    <% end %>
+  </div>
+</div>
+
+<%= render 'lessons/list', lessons: @lessons %>

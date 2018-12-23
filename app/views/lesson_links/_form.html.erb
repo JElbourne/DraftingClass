@@ -1,0 +1,44 @@
+<%= form_with(model: lesson_link, local: true) do |form| %>
+  <% if lesson_link.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(lesson_link.errors.count, "error") %> prohibited this lesson_link from being saved:</h2>
+
+      <ul>
+      <% lesson_link.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= form.label :lesson_id %>
+    <%= form.text_field :lesson_id, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :name %>
+    <%= form.text_field :name, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :link_url %>
+    <%= form.text_field :link_url, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <% if lesson_link.persisted? %>
+      <div class="float-right">
+        <%= link_to 'Destroy', lesson_link, method: :delete, class: "text-danger", data: { confirm: 'Are you sure?' } %>
+      </div>
+    <% end %>
+
+    <%= form.submit class: 'btn btn-primary' %>
+
+    <% if lesson_link.persisted? %>
+      <%= link_to "Cancel", lesson_link, class: "btn btn-link" %>
+    <% else %>
+      <%= link_to "Cancel", lesson_links_path, class: "btn btn-link" %>
+    <% end %>
+  </div>
+<% end %>

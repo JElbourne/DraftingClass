@@ -1,0 +1,30 @@
+<div class="table-responsive">
+  <table class="table table-striped table-bordered table-hover">
+    <thead>
+      <tr>
+    
+
+            <th>Course</th>
+            <th>Title</th>
+            <th>Transcript</th>
+            <th>Video url</th>
+            
+          <th></th>
+        
+      </tr>
+    </thead>
+
+    <tbody>
+      <% lessons.each do |lesson| %>
+        <%= content_tag :tr, id: dom_id(lesson), class: dom_class(lesson) do %>
+          
+              <td><%= link_to lesson.course.name, lesson.course %></td>
+              <td><%= link_to lesson.title, lesson %></td>
+              <td><%= lesson.transcript %></td>
+              <td><%= lesson.video_url %></td>
+          
+        <% end %>
+      <% end %>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,49 @@
+<%= form_with(model: course, local: true) do |form| %>
+  <% if course.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(course.errors.count, "error") %> prohibited this course from being saved:</h2>
+
+      <ul>
+      <% course.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= form.label :name %>
+    <%= form.text_field :name, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :description %>
+    <%= form.text_area :description, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :price %>
+    <%= form.text_field :price, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :discount %>
+    <%= form.text_field :discount, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <% if course.persisted? %>
+      <div class="float-right">
+        <%= link_to 'Destroy', course, method: :delete, class: "text-danger", data: { confirm: 'Are you sure?' } %>
+      </div>
+    <% end %>
+
+    <%= form.submit class: 'btn btn-primary' %>
+
+    <% if course.persisted? %>
+      <%= link_to "Cancel", course, class: "btn btn-link" %>
+    <% else %>
+      <%= link_to "Cancel", courses_path, class: "btn btn-link" %>
+    <% end %>
+  </div>
+<% end %>
