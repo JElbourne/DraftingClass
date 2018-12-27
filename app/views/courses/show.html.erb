@@ -3,7 +3,7 @@
     <span class="glyphicon glyphicon-list-alt"></span>
     All Courses
   <% end %>
-  <%= link_to edit_course_path(@course), class: 'btn btn-primary' do %>
+  <%= link_to_if is_admin?, edit_course_path(@course), class: 'btn btn-primary' do %>
     <span class="glyphicon glyphicon-pencil"></span>
     Edit
   <% end %>
@@ -24,6 +24,11 @@
   <dd><%= @course.discount %></dd>
 
 </dl>
+
+<%= link_to new_course_purchase_path(@course), class: 'btn btn-primary'  do %>
+  <span class="glyphicon glyphicon-credit-card"></span>
+  Buy Now
+  <% end %>
 
 <div class="row">
   <div class="col-sm-6">
