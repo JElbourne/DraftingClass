@@ -1,3 +1,5 @@
+require 'rails_helper'
+
 describe 'Authentication', type: :feature do
     it 'allows users to log in' do
       user = FactoryBot.create(:user, password: 'password')

@@ -1,3 +1,5 @@
+require 'rails_helper'
+
 describe 'Purchase', type: :feature do
     describe 'VISIT #NEW' do
         it 'DOES NOT allow visitor to view NEW Purchase form' do
@@ -42,4 +44,5 @@ describe 'Purchase', type: :feature do
             expect(current_path).to eq new_course_purchase_path(course)
         end
     end
+
 end

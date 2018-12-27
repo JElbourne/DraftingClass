@@ -1,3 +1,5 @@
+require 'rails_helper'
+
 describe 'Lesson', type: :feature do
     describe 'VISIT #INDEX' do
         it 'allows VISITOR to view all Published lessons' do

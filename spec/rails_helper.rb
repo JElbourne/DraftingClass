@@ -7,7 +7,7 @@ abort("The Rails environment is running in production mode!") if Rails.env.produ
 require 'rspec/rails'
 require 'support/factory_bot'
 require 'capybara/rspec'
-require 'rails-controller-testing'
+# require 'rails-controller-testing'
 # Add additional requires below this line. Rails is not loaded until this point!
 
 # Requires supporting ruby files with custom matchers and macros, etc, in
@@ -62,6 +62,7 @@ RSpec.configure do |config|
   # arbitrary gems may also be filtered via:
   # config.filter_gems_from_backtrace("gem name")
 
+  config.include Devise::Test::ControllerHelpers, :type => :controller
   config.include Warden::Test::Helpers
   Warden.test_mode!
   
@@ -85,6 +86,11 @@ RSpec.configure do |config|
       with.library :action_controller
       with.library :rails
     end
+  end
+
+  Capybara.javascript_driver = :webkit
+  Capybara::Webkit.configure do |config|
+    config.block_unknown_urls
   end
 
 end

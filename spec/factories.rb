@@ -40,7 +40,6 @@ FactoryBot.define do
       published { false }
     end
 
-
   end
 
   

@@ -6,5 +6,8 @@ class CreateStudents < ActiveRecord::Migration[5.2]
 
       t.timestamps
     end
+
+    add_index :students, [ :user_id, :course_id ], :unique => true, :name => 'by_user_and_course'
+
   end
 end

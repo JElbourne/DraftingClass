@@ -44,11 +44,13 @@ group :development, :test do
   gem 'capybara'
   gem 'shoulda-matchers', git: 'https://github.com/thoughtbot/shoulda-matchers.git', branch: 'rails-5'
   gem 'factory_bot_rails'
-  gem 'rails-controller-testing'
+  # gem 'rails-controller-testing'
+  gem 'stripe-ruby-mock', '~> 2.5.6', :require => 'stripe_mock'
 end
 
 group :test do
   gem 'database_cleaner'
+  gem "capybara-webkit"
 end
 
 group :development do
