@@ -5,9 +5,33 @@
   </div>
 <% end %>
 
-<nav class="navbar navbar-expand-md navbar-light bg-light">
+<!-- Modal -->
+<div class="modal fade" id="search-main" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="navbar-search">
+        <div class="container">
+          <form class="navbar-search-form" action="/search" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="✓">
+            <div class="form-group">
+              <div class="input-group input-group-transparent">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"><i class="fas fa-search"></i></span>
+                </div>
+                <input type="text" name="q" id="q" class="form-control" placeholder="What do you want to learn?">
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<nav class="navbar navbar-main navbar-expand-lg navbar-transparent navbar-dark bg-gradient-dark">
   <div class="container">
-    <%= link_to Rails.configuration.application_name, root_path, class: "navbar-brand" %>
+    <%= link_to root_path, class: "navbar-brand mr-lg-5" do %>
+      <%= Rails.configuration.application_name %>
+    <% end %>
 
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMain" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -15,17 +39,25 @@
 
     <div class="collapse navbar-collapse" id="navbarMain">
       <ul class="navbar-nav mr-auto mt-2 mt-md-0">
+        <li class="nav-item"><%= link_to "Screencasts", lessons_path, class: "nav-link" %></li>
+        <li class="nav-item"><%= link_to "Courses", courses_path, class: "nav-link" %></li>
+        <li class="nav-item"><%= link_to "Community", courses_path, class: "nav-link" %></li>
+        <li class="nav-item">
+          <a href="#search-main" class="nav-link" data-toggle="modal">
+            <i class="fas fa-search"></i>
+          </a>
+        </li>
       </ul>
 
-      <ul class="navbar-nav">
+      <ul class="navbar-nav align-items-lg-center">
         <li class="nav-item"><%= link_to "What's New", announcements_path, class: "nav-link #{unread_announcements(current_user)}" %></li>
         <% if user_signed_in? %>
 
-        <li class="nav-item">
-          <%= link_to notifications_path, class: "nav-link" do %>
-            <span><i class="fa fa-flag-o" aria-hidden="true"></i></span>
-          <% end %>
-         </li>
+          <li class="nav-item">
+            <%= link_to notifications_path, class: "nav-link" do %>
+              <span><i class="fa fa-flag-o" aria-hidden="true"></i></span>
+            <% end %>
+          </li>
 
           <li class="nav-item dropdown">
             <%= link_to root_path, id: "navbar-dropdown", class: "nav-link dropdown-toggle", data: { toggle: "dropdown" }, aria: { haspopup: true, expanded: false } do %>
@@ -42,8 +74,13 @@
           </li>
 
         <% else %>
-          <li class="nav-item"><%= link_to "Sign Up", new_user_registration_path, class: "nav-link" %></li>
           <li class="nav-item"><%= link_to "Login", new_user_session_path, class: "nav-link" %></li>
+          <li class="nav-item">
+            <%= link_to new_user_registration_path, class: "btn btn-sm btn-info btn-circle btn-icon" do %> 
+              <span class="btn-inner--text">Get started</span>
+              <span class="btn-inner--icon"><i class="fas fa-angle-right"></i></span>
+            <% end %>
+          </li>
         <% end %>
       </ul>
     </div>
