@@ -108,6 +108,10 @@ body > .alert {
   white-space: nowrap;
 }
 
+.navbar-brand .brand-logo {
+  height: 45px;
+}
+
 @media (min-width: 992px) {
   .navbar-expand-lg .navbar-nav .nav-link {
     padding-right: 1rem;

@@ -1,30 +1,70 @@
-<div class="table-responsive">
-  <table class="table table-striped table-bordered table-hover">
-    <thead>
-      <tr>
+
+  <div class="row">
+    <div class="col-md-9">
     
+        <div class="row">
+            <div class="col-md-6">
+              
+              <div class="card shadow-sm shadow--hover mb-5 episode" id="episode_279">
+                <a class="d-block episode-thumbnail" href="/episodes/embeddable-javascript-widget-part-6?autoplay=1">
+                  <img data-src="https://embed-ssl.wistia.com/deliveries/406b2718480e9579833ebe8a2ca3a5fa.jpg?image_crop_resized=400x240" class="card-img-top" src="https://embed-ssl.wistia.com/deliveries/406b2718480e9579833ebe8a2ca3a5fa.jpg?image_crop_resized=400x240" alt="Fallback">
+                  <span class="episode-length">14:06</span>
+              </a>
+              <div class="card-body">
+                  <a class="h5 lh-150 text-info--hover" href="/episodes/embeddable-javascript-widget-part-6?autoplay=1">Webpacker Javascript Embed Code Snippet &amp; Scoped Styles</a>
+                  <h6 class="text-muted text-sm mt-3 mb-0">
+                    #277
+                    ·
+                    <time datetime="2018-12-26T06:00:00Z" data-local="time" data-format="%b %d, %Y" title="December 26, 2018 at 1:00am EST" data-localized="" aria-label="Dec 26, 2018">Dec 26, 2018</time>
+                    <span class="badge badge-danger ml-2">Pro</span>
+                  </h6>
+                  <p class="mt-1 mb-0 lh-150">We can use webpacker to create scoped styles for our Javascript widget and build an embed code that links to the latest version of our webpacker JS and CSS for our embeddable widget.</p>
+                </div>
+                <div class="card-footer">
+                  <div class="d-flex">
+                    <div class="flex-grow-1">
+                      <span class="text-muted"><i class="fas fa-heart mr-1 text-muted"></i> 3</span>
+                    </div>
 
-            <th>Course</th>
-            <th>Title</th>
-            <th>Transcript</th>
-            <th>Video url</th>
-            
-          <th></th>
-        
-      </tr>
-    </thead>
+                    <div>
+                      <ul class="list-inline mb-0">
+                        <li class="list-inline-item">
+                          <a data-behavior="completed-status" class="text-muted" href="/episodes/embeddable-javascript-widget-part-6"><i class="fas fa-times "></i> Incomplete</a>
+                        </li>
+                        <li class="list-inline-item">
+                          <a data-behavior="watchlist-status" class="text-muted" data-remote="true" rel="nofollow" data-method="post" href="/episodes/embeddable-javascript-widget-part-6/watchlist"><i class="far fa-bookmark"></i></a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>  
 
-    <tbody>
-      <% lessons.each do |lesson| %>
-        <%= content_tag :tr, id: dom_id(lesson), class: dom_class(lesson) do %>
-          
-              <td><%= link_to lesson.course.name, lesson.course %></td>
-              <td><%= link_to lesson.title, lesson %></td>
-              <td><%= lesson.transcript %></td>
-              <td><%= lesson.video_url %></td>
-          
-        <% end %>
-      <% end %>
-    </tbody>
-  </table>
-</div>
+      <div class="text-center">
+        <nav><ul class="pagination"><li class="page-item disabled"><span class="page-link">←</span></li> <li class="page-item active"><span class="page-link">1</span></li> <li class="page-item"><a class="page-link" rel="next" href="/episodes?direction=desc&amp;page=2&amp;sort=number">2</a></li> <li class="page-item"><a class="page-link" href="/episodes?direction=desc&amp;page=3&amp;sort=number">3</a></li> <li class="page-item"><a class="page-link" href="/episodes?direction=desc&amp;page=4&amp;sort=number">4</a></li> <li class="page-item"><a class="page-link" href="/episodes?direction=desc&amp;page=5&amp;sort=number">5</a></li> <li class="page-item"><a class="page-link" href="/episodes?direction=desc&amp;page=6&amp;sort=number">6</a></li> <li class="page-item"><a class="page-link" href="/episodes?direction=desc&amp;page=7&amp;sort=number">7</a></li> <li class="page-item"><a class="page-link" href="/episodes?direction=desc&amp;page=8&amp;sort=number">8</a></li> <li class="page-item"><a class="page-link" href="/episodes?direction=desc&amp;page=9&amp;sort=number">9</a></li> <li class="page-item disabled"><i class="page-link">…</i></li> <li class="page-item"><a class="page-link" href="/episodes?direction=desc&amp;page=27&amp;sort=number">27</a></li> <li class="page-item"><a class="page-link" href="/episodes?direction=desc&amp;page=28&amp;sort=number">28</a></li> <li class="page-item"><a class="page-link" rel="next" href="/episodes?direction=desc&amp;page=2&amp;sort=number">→</a></li></ul></nav>
+      </div>
+    </div>
+
+    <div class="col-md-2 offset-md-1 text-sm forum-thread-filters">
+      <h6 class="text-muted">Filter By</h6>
+      <div class="list-group">
+        <a class="list-group-item list-group-item-action active" href="/episodes?direction=desc&amp;q%5Bfree_eq%5D=&amp;sort=number">All Episodes</a>
+        <a class="list-group-item list-group-item-action " href="/episodes?direction=desc&amp;q%5Bfree_eq%5D=true&amp;sort=number">Free Episodes</a>
+        <a class="list-group-item list-group-item-action " href="/episodes?direction=desc&amp;q%5Bfree_eq%5D=false&amp;sort=number">Pro Episodes</a>
+      </div>
+
+      <h6 class="text-muted mt-4">Sort By</h6>
+      <div class="list-group">
+        <a class="active desc sortable list-group-item list-group-item-action" href="/episodes?direction=asc&amp;sort=number">Published Date</a>
+        <a class=" sortable list-group-item list-group-item-action" href="/episodes?direction=desc&amp;sort=hearts_count">Popularity</a>
+      </div>
+
+      <h6 class="text-muted mt-4">Categories</h6>
+      <div class="list-group">
+            <a class="list-group-item list-group-item-action" href="/episodes/tagged/ActionCable">ActionCable</a>
+      </div>
+    </div>
+
+  </div>
