@@ -66,6 +66,7 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
+gem "aws-sdk-s3"
 gem 'stripe', '~> 4.4'
 gem 'administrate', '~> 0.10.0'
 gem 'bootstrap', '~> 4.1', '>= 4.1.1'

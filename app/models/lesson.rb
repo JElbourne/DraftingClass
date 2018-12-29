@@ -1,6 +1,7 @@
 class Lesson < ApplicationRecord
   scope :is_published, -> {where(published: true)}
 
+  has_one_attached :image
   belongs_to :course
   has_many :lesson_links
 

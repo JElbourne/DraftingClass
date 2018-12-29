@@ -2,6 +2,7 @@ class Course < ApplicationRecord
 
     scope :is_published, -> {where(published: true)}
 
+    has_one_attached :image
     has_many :students
     has_many :lessons
 
