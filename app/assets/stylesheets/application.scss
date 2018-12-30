@@ -25,9 +25,41 @@ body {
   overflow-x: hidden;
 }
 
+section {
+  background-color: #fff;
+}
+
+.slice {
+  position: relative;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.bg-dark {
+  background-color: #05172a !important;
+}
+
+.bg-cover {
+  position: relative;
+  background-repeat: no-repeat;
+}
+
+.bg-size--contain {
+  background-size: contain;
+}
+
 // Masquerade alert shouldn't have a bottom margin
-body > .alert {
+.alert {
   margin-bottom: 0;
+  padding: 1rem 1.5rem;
+  border: 0;
+  border-radius: 0.25rem;
+}
+
+.alert-info {
+  color: #fff;
+  background-color: #47c3fb;
+  border-color: #47c3fb;
 }
 
 .navbar {
@@ -37,6 +69,10 @@ body > .alert {
   align-items: center;
   justify-content: space-between;
   padding: 0.75rem 1rem;
+}
+
+.navbar-dark {
+  background-color: #05172a;
 }
 
 .navbar-search {
@@ -128,7 +164,13 @@ body > .alert {
 
   .mr-lg-5, .mx-lg-5 {
     margin-right: 3rem !important;
-}
+  }
+  .pt-lg-md, .py-lg-md {
+    padding-top: 4rem !important;
+  }
+  .pb-lg-md, .py-lg-md {
+    padding-bottom: 4rem !important;
+  }
 }
 
 @media (min-width: 576px) {
@@ -189,11 +231,61 @@ body > .alert {
   background: radial-gradient(ellipse at center, rgba(0,0,0,0.2) 0, rgba(255,255,255,0) 75%);
 }
 
+.btn {
+  display: inline-block;
+  font-weight: 600;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border: 0.0625rem solid transparent;
+  padding: 0.625rem 1.6rem;
+  font-size: 1rem;
+  line-height: 1.7;
+  border-radius: 0.25rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.btn-outline-white {
+  color: #fff;
+  background-color: transparent;
+  background-image: none;
+  border-color: #fff;
+}
+
+.btn-outline-white:hover {
+  color: #212529;
+  background-color: #fff;
+  border-color: #fff;
+}
+
+.btn-outline-white .btn-inner--text:not(:first-child) {
+  margin-left: 0.75em;
+}
+
 .btn-info {
   color: #fff;
   background-color: #24b7fa;
   border-color: #24b7fa;
   box-shadow: none;
+}
+
+.btn-info:hover {
+  color: #fff;
+  background-color: #06a8f2;
+  border-color: #059fe6;
+}
+
+.btn-translate--hover {
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-translate--hover:hover {
+  -webkit-transform: translateY(-3px);
+  transform: translateY(-3px);
 }
 
 .btn-sm {
