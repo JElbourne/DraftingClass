@@ -17,8 +17,21 @@ Rails.application.routes.draw do
 
       root to: "users#index"
     end
-  get '/privacy', to: 'home#privacy'
+
+  get '/support', to: 'home#support'
   get '/terms', to: 'home#terms'
+  get '/privacy', to: 'home#privacy'
+  get '/about', to: 'home#about'
+  get '/pricing', to: 'home#pricing'
+  get '/review', to: 'home#review'
+  get '/tools', to: 'home#tools'
+  get '/blog', to: 'home#blog'
+  get '/permit', to: 'home#permit'
+  get '/designs', to: 'home#designs'
+  get '/podcast', to: 'home#podcast'
+  get '/merch', to: 'home#merch'
+
+
   resources :notifications, only: [:index]
   resources :announcements, only: [:index]
   authenticate :user, lambda { |u| u.admin? } do

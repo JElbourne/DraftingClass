@@ -1,9 +1,71 @@
-<footer class="footer text-muted bg-light">
+<footer class="footer-light bg-white">
   <div class="container">
-    <span>© <%= Date.today.year %> Your Company</span>
-    <ul class="list-inline mb-0 float-right">
-      <li class="list-inline-item mr-3"><%= link_to "Terms", terms_path %></li>
-      <li class="list-inline-item mr-3"><%= link_to "Privacy", privacy_path %></li>
-    </ul>
+    <div class="row pt-md">
+      <div class="col-lg-4 mb-5 mb-lg-0">
+        <%= link_to root_path, class: "navbar-brand mr-lg-5" do %>
+          <%= embedded_svg "DraftingClass_Logo_Dark.svg", class: "footer-brand-logo mb-3" %>
+        <% end %>
+        <p class="text-sm">
+          A resources for people interested in Architecture and House Design. Perfect for students wanting to learn about architecture. Learn with free screencasts and paid course / instructional lessons.
+        </p>
+      </div>
+      <div class="col-lg-2 col-6 col-sm-4 ml-lg-auto mb-5 mb-lg-0">
+        <h6 class="heading mb-3">Platform</h6>
+        <ul class="list-unstyled">
+          <li><%= link_to "Pricing", pricing_path %></li>
+          <li><%= link_to "Plan Review", review_path %></li>
+          <li><%= link_to "Tools", tools_path %></li>
+          <li><%= link_to "Blog", blog_path %></li>
+        </ul>
+      </div>
+
+      <div class="col-lg-2 col-6 col-sm-4 mb-5 mb-lg-0">
+        <h6 class="heading mb-3">Extras</h6>
+        <ul class="list-unstyled text-small">
+          <li><%= link_to "Permit Drawings", permit_path %></li>
+          <li><%= link_to "Design Packages", designs_path %></li>
+          <li><%= link_to "Podcast", podcast_path %></li>
+          <li><%= link_to "Merchandise", merch_path %></li>
+        </ul>
+      </div>
+
+      <div class="col-lg-2 col-sm-4 mb-5 mb-lg-0">
+        <h6 class="heading mb-3">Company</h6>
+        <ul class="list-unstyled">
+          <li><%= link_to "Support", support_path %></li>
+          <li><%= link_to "Terms", terms_path %></li>
+          <li><%= link_to "Privacy", privacy_path %></li>
+          <li><%= link_to "About", about_path %></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="row align-items-center justify-content-md-between py-4 mt-4 delimiter-top">
+      <div class="col-md-6">
+        <div class="copyright text-sm font-weight-bold text-center text-md-left">
+          © <%= Date.today.year %> <%= Rails.configuration.application_name %>. All rights reserved.
+        </div>
+      </div>
+      <div class="col-md-6">
+        <ul class="nav justify-content-center justify-content-md-end mt-3 mt-md-0">
+          <li class="nav-item">
+            <%= link_to "https://twitter.com/", class: "nav-link", target: "blank" do %>
+              <i class="fab fa-twitter"></i>
+            <% end %>
+          </li>
+          <li class="nav-item">
+            <%= link_to "https://www.facebook.com/", class: "nav-link", target: "blank" do %>
+              <i class="fab fa-facebook"></i>
+            <% end %>
+          </li>
+          <li class="nav-item">
+            <%= link_to "https://www.youtube.com/", class: "nav-link", target: "blank" do %>
+              <i class="fab fa-youtube"></i>
+            <% end %>
+          </li>
+        </ul>
+      </div>
+    </div>
+
   </div>
 </footer>

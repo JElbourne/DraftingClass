@@ -138,6 +138,57 @@ body > .alert {
   }
 }
 
+.pt-md, .py-md {
+  padding-top: 4rem !important;
+}
+
+.text-sm {
+  font-size: 0.875rem !important;
+}
+
+.footer-brand-logo {
+  height: 55px;
+}
+
+.footer-light p {
+  color: rgba(5,23,42,0.65);
+}
+
+.footer-light .heading {
+  color: rgba(5,23,42,0.9);
+  font-weight: 600;
+}
+
+.footer-light .list-unstyled li a {
+  color: rgba(5,23,42,0.65);
+}
+
+.footer-light .list-unstyled li a:hover {
+  color: rgba(5,23,42,0.9);
+}
+
+.footer-light .nav-link {
+  color: #495057;
+  display: block;
+  padding: 0.25rem 0.75rem;
+}
+
+.footer-light .font-weight-bold {
+  font-weight: 600 !important;
+}
+
+.footer-light .delimiter-top:before {
+  content: '';
+  display: block;
+  width: 80%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -40%;
+  height: 1px;
+  background: radial-gradient(ellipse at center, rgba(0,0,0,0.2) 0, rgba(255,255,255,0) 75%);
+}
+
 .btn-info {
   color: #fff;
   background-color: #24b7fa;
@@ -160,8 +211,16 @@ body > .alert {
   align-items: center !important;
 }
 
+.align-items-center {
+  align-items: center !important;
+}
+
 .bg-gradient-dark {
   background: linear-gradient(80deg, #05172a 0, #051e2a 100%) !important;
+}
+
+.delimiter-top, .delimiter-bottom {
+  position: relative;
 }
 
 .btn-circle {
