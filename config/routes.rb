@@ -31,6 +31,7 @@ Rails.application.routes.draw do
   get '/podcast', to: 'home#podcast'
   get '/merch', to: 'home#merch'
 
+  post '/newsletter', to: 'mailchimp#newsletter', as: 'newsletter'
 
   resources :notifications, only: [:index]
   resources :announcements, only: [:index]

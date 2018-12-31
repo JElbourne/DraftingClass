@@ -18,3 +18,139 @@
     </div>
   </div>
 </section>
+
+<section class="slice slice-lg mt--100">
+  <div class="container">
+    <div class="row row-grid align-items-center">
+      <div class="col-lg-4">
+        <div class="pt-lg-md pb-lg-md text-center text-lg-left">
+          <h2 class="heading h3 mb-3">Super easy to understand</h2>
+          <p class="lead lh-180">Drafting Class courses walk you through not just the <em>how</em>, but the <u>why</u>.<br><br> We want you to feel like your looking over the shoulder of a colleague. We want to prepare you for your next job or future college course</p>
+          <%= link_to courses_path, class: "btn btn-primary btn-circle btn-translate--hover btn-icon mt-4" do %>
+            <span class="btn-inner--text">Explore Drafting Courses</span>
+            <span class="btn-inner--icon"><i class="fas fa-angle-right"></i></span>
+          <% end %>
+        </div>
+      </div>
+
+      <div class="col-lg-7 ml-lg-auto">
+        <div class="row">
+          <div class="col-md-6">
+
+            <div class="card mb-4">
+              <div class="card-body">
+                <div class="icon text-primary mb-3">
+                  <img class="img-fluid" src="/assets/tech/rails-e6d7efc676da55da20de9da9e4d231a44542d457e0191a3a1074a945bb194363.svg" alt="Rails">
+                </div>
+                <h5 class="h5">Anotomy Of A House</h5>
+                <p>Learning about the anotomy of a house is the best way to be proficiant with your design and drafting. Knowledge in this area will help make your life easier at work or at school.</p>
+              </div>
+            </div>
+
+            <div class="card mb-4">
+              <div class="card-body">
+                <div class="icon text-primary mb-3">
+                  <img class="img-fluid" src="/assets/tech/js-9a935d7337be064b40842c213d6bf3d96b2809c32563e858d60b98bb71e347bd.svg" alt="Js">
+                </div>
+                <h5 class="h5">BCIN Preperation</h5>
+                <p>We want to help you be prepared for the BCIN government testing. Learn how to understand the Building Code and efficiently find information to answer questions.</p>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="col-md-6 pt-lg-md pt-4">
+            <div class="card mb-4">
+              <div class="card-body">
+                <div class="icon text-primary mb-3">
+                  <img class="img-fluid" src="/assets/tech/ruby-a91a3ee3b3ac1e0ba95e964651b09e1124633a893a8e7e8f2f47dd57196e7bfb.svg" alt="Ruby">
+                </div>
+                <h5 class="h5">House Design Fundamentals</h5>
+                <p>Anyone can design a floor plan but it takes skill to design one that can be built and is great to live in. This course will teach some design fundamentals.</p>
+              </div>
+            </div>
+
+            <div class="card mb-4">
+              <div class="card-body">
+                <div class="icon text-primary mb-3">
+                  <img class="img-fluid" src="/assets/tech/server-98ac7357b5ea345f43b4d8d04298b7f370714c196c4815c2010cd6edce23be16.png" alt="Server">
+                </div>
+                <h5 class="h5">Creating a Permit Set</h5>
+                <p>The purpose of a design is to someday build it in reality. This course will teach how to complete a full permit set of drawings from a design.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="slice slice-lg bg-dark mt-5">
+  <span class="tongue tongue-top"><i class="fas fa-angle-up"></i></span>
+  <div class="container">
+    <div class="mb-md text-center">
+      <h3 data-drip-attribute="headline" class="heading h3 text-white">Subscribe to the newsletter</h3>
+      <div class="fluid-paragraph text-center mt-4">
+        <p data-drip-attribute="description" class="lead lh-180 text-muted">Learn about new screencasts, articles, guides, updates, and more.</p>
+      </div>
+    </div>
+
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <%= form_with url: newsletter_path, local: true do |form| %>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <%= form.text_field :fname, class: "form-control form-control-lg", placeholder: "First name" %>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <%= form.text_field :lname, class: "form-control form-control-lg", placeholder: "Last name" %>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <%= form.text_field :email, class: "form-control form-control-lg", placeholder: "Email address" %>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <p class="text-center font-italic">By clicking this button, you agree to the Drafting Class <%= link_to "Terms of Service", terms_path, class: "underline text-muted", target:"_blank" %> and <%= link_to "Privacy Policy", privacy_path, class: "underline text-muted", target: "_blank" %>.</p>
+                <button type="submit" class="btn btn-lg btn-block btn-primary btn-icon" value="Sign Up">
+                    <span class="btn-inner--icon"><i class="fas fa-paper-plane"></i></span>
+                    <span class="btn-inner--text">Subscribe</span>
+                </button>
+            </div>
+
+            <div class="mt-5 text-center font-weight-bold">More of a social being? We're also on <%= link_to "Twitter", "https://twitter.com/", class: "underline text-muted", target: "_blank" %> and <%= link_to "YouTube", "https://youtube.com/", class: "underline text-muted", target: "_blank" %>.<p></p>
+            
+            </div>
+        <% end %>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slice slice-lg bg-secondary delimiter-bottom">
+  <span class="tongue tongue-top tongue-dark"><i class="fas fa-angle-up"></i></span>
+
+  <div class="container">
+    <div class="row justify-content-center align-items-center">
+      <div class="col-lg-6 text-center">
+        <h3 class="font-weight-400">I am ready to start learning about Architecture with <span class="font-weight-700">Drafting Class</span> courses.</h3>
+        <div class="mt-5">
+          <%= link_to new_user_registration_path, target: "_blank", class: "btn btn-info btn-circle btn-translate--hover btn-icon mr-sm-4 scroll-me" do %>
+            <span class="btn-inner--text">Create Account</span>
+            <span class="btn-inner--icon"><i class="fas fa-angle-right"></i></span>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

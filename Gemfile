@@ -68,6 +68,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem "aws-sdk-s3"
 gem 'stripe', '~> 4.4'
+gem 'gibbon', '~> 2.2', '>= 2.2.3'
 gem 'administrate', '~> 0.10.0'
 gem 'bootstrap', '~> 4.1', '>= 4.1.1'
 gem 'data-confirm-modal', '~> 1.6', '>= 1.6.2'
