@@ -30,6 +30,7 @@ Rails.application.routes.draw do
   get '/designs', to: 'home#designs'
   get '/podcast', to: 'home#podcast'
   get '/merch', to: 'home#merch'
+  get '/answers', to: 'home#answers'
 
   post '/newsletter', to: 'mailchimp#newsletter', as: 'newsletter'
 

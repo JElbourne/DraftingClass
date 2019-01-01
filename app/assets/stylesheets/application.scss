@@ -329,6 +329,32 @@ h3 {
   border-color: #059fe6;
 }
 
+.btn-warning {
+  color: #fff;
+  background-color: #ff9500;
+  border-color: #ff9500;
+  box-shadow: none;
+}
+
+.btn-warning:hover {
+  color: #fff;
+  background-color: #d97f00;
+  border-color: #cc7700;
+}
+
+.btn-success {
+  color: #fff;
+  background-color: #4cd964;
+  border-color: #4cd964;
+  box-shadow: none;
+}
+
+.btn-success:hover {
+  color: #fff;
+  background-color: #2dd249;
+  border-color: #2ac845;
+}
+
 .btn-translate--hover {
   transition: all 0.2s ease-in-out;
 }
@@ -367,6 +393,34 @@ h3 {
 
 .btn-circle {
   border-radius: 30px;
+}
+
+.icon {
+  display: inline-flex;
+  min-width: 3rem;
+  min-height: 3rem;
+}
+
+.icon-shape {
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.25rem;
+}
+
+.icon-orange {
+  color: #b86b00;
+  background-color: rgba(255,170,51,0.5);
+}
+
+.icon-teal {
+  color: #0093d7;
+  background-color: rgba(86,199,251,0.5);
+}
+
+.icon-green {
+  color: #21bc3c;
+  background-color: rgba(118,226,136,0.5);
 }
 
 .input-group-transparent .input-group-text {

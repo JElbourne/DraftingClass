@@ -40,7 +40,7 @@
             <div class="card mb-4">
               <div class="card-body">
                 <div class="icon text-primary mb-3">
-                  <img class="img-fluid" src="/assets/tech/rails-e6d7efc676da55da20de9da9e4d231a44542d457e0191a3a1074a945bb194363.svg" alt="Rails">
+                  <%= image_tag "Anatomy.jpg", class: "img-fluid", alt: "Anotomy Of A House" %>
                 </div>
                 <h5 class="h5">Anotomy Of A House</h5>
                 <p>Learning about the anotomy of a house is the best way to be proficiant with your design and drafting. Knowledge in this area will help make your life easier at work or at school.</p>
@@ -50,7 +50,7 @@
             <div class="card mb-4">
               <div class="card-body">
                 <div class="icon text-primary mb-3">
-                  <img class="img-fluid" src="/assets/tech/js-9a935d7337be064b40842c213d6bf3d96b2809c32563e858d60b98bb71e347bd.svg" alt="Js">
+                  <%= image_tag "BCIN.jpg", class: "img-fluid", alt: "BCIN Preperation" %>
                 </div>
                 <h5 class="h5">BCIN Preperation</h5>
                 <p>We want to help you be prepared for the BCIN government testing. Learn how to understand the Building Code and efficiently find information to answer questions.</p>
@@ -63,7 +63,7 @@
             <div class="card mb-4">
               <div class="card-body">
                 <div class="icon text-primary mb-3">
-                  <img class="img-fluid" src="/assets/tech/ruby-a91a3ee3b3ac1e0ba95e964651b09e1124633a893a8e7e8f2f47dd57196e7bfb.svg" alt="Ruby">
+                  <%= image_tag "Plan.jpg", class: "img-fluid", alt: "House Design Fundamentals" %>
                 </div>
                 <h5 class="h5">House Design Fundamentals</h5>
                 <p>Anyone can design a floor plan but it takes skill to design one that can be built and is great to live in. This course will teach some design fundamentals.</p>
@@ -73,7 +73,7 @@
             <div class="card mb-4">
               <div class="card-body">
                 <div class="icon text-primary mb-3">
-                  <img class="img-fluid" src="/assets/tech/server-98ac7357b5ea345f43b4d8d04298b7f370714c196c4815c2010cd6edce23be16.png" alt="Server">
+                  <%= image_tag "Permit.jpg", class: "img-fluid", alt: "Creating a Permit Set" %>
                 </div>
                 <h5 class="h5">Creating a Permit Set</h5>
                 <p>The purpose of a design is to someday build it in reality. This course will teach how to complete a full permit set of drawings from a design.</p>
@@ -81,6 +81,96 @@
             </div>
 
           </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="slice bg-dark overflow-hidden">
+  <div class="container position-relative zindex-100">
+    <div class="mb-md text-center">
+      <h3 class="text-white mt-4">Learn with confidence</h3>
+      <div class="fluid-paragraph text-center mt-4">
+        <p class="lead text-white lh-180">Our community section can help you with just about any problem.</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-4">
+        <div class="card shadow border-0 mb-4">
+          <div class="card-body py-5">
+            <div class="d-flex align-items-start">
+              <div class="icon icon-shape icon-green rounded-circle">
+                <i class="fas fa-video"></i>
+              </div>
+              <div class="icon-text pl-4">
+                <h5 class="font-weight-bold">Watch videos and draw real details</h5>
+              </div>
+            </div>
+            <p class="my-4">
+              Our screencasts are design to teach you how to think about building in the real world.
+            </p>
+            <%= link_to "View Screencasts Topics", lessons_path, class: "btn btn-sm btn-success btn-circle btn-block btn-translate--hover" %>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="card shadow border-0 mb-4">
+          <div class="card-body py-5">
+            <div class="d-flex align-items-start">
+              <div class="icon icon-shape icon-orange rounded-circle">
+                <i class="fas fa-question"></i>
+              </div>
+              <div class="icon-text pl-4">
+                <h5 class="font-weight-bold">Ask questions when you need help</h5>
+              </div>
+            </div>
+            <p class="my-4">You have a community of Designers at your fingertips, you can get help with just about any problem you have.</p>
+            <%= link_to "See Recent Questions", answers_path, class: "btn btn-sm btn-warning btn-circle btn-block btn-translate--hover" %>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="card shadow border-0 mb-4">
+          <div class="card-body py-5">
+            <div class="d-flex align-items-start">
+              <div class="icon icon-shape icon-teal rounded-circle">
+                <i class="fas fa-comments"></i>
+              </div>
+              <div class="icon-text pl-4">
+                <h5 class="font-weight-bold">Help others in the community</h5>
+              </div>
+            </div>
+            <p class="my-4">
+              The best way to learn is often to help others with their problems. Join the community to answer questions.
+            </p>
+            <%= link_to "See Unanswered Questions", answers_path, class: "btn btn-sm btn-info btn-circle btn-block btn-translate--hover" %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="slice slice-lg">
+  <div class="container">
+    <div class="row row-grid align-items-center justify-content-around">
+      <div class="col-lg-5">
+        <div class="pr-md-4">
+          <span class="badge badge-lg badge-primary opacity-8 text-uppercase ls-1 font-weight-600 mb-3">Detail guides</span>
+          <h3 class="heading h3">It's all in the Details</h3>
+          <p class="lead my-4">Watch as we draw building details together with everything explained. You can learn to draw your own, or purchase a download of the CAD file.</p>
+          <%= link_to lessons_path, class: "btn btn-primary btn-circle btn-icon mt-4" do %>
+            <span class="btn-inner--text">Check out the free screencasts</span>
+            <span class="btn-inner--icon"><i class="fas fa-angle-right"></i></span>
+          <% end %>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="position-relative" style="z-index: 10;">
+          <%= link_to lessons_path do %>
+            <%= image_tag("detail.png", class: "img-fluid img-center") %>
+          <% end %>
         </div>
       </div>
     </div>
