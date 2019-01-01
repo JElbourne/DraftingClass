@@ -37,4 +37,10 @@ class HomeController < ApplicationController
 
   def merch
   end
+
+  def community
+  end
+
+  def answer
+  end
 end
