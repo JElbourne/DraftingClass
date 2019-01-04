@@ -32,8 +32,18 @@
   </div>
 
   <div class="form-group">
+    <%= form.label :length %>
+    <%= form.number_field :length, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
     <%= form.label :video_url %>
     <%= form.text_field :video_url, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :tag_ids %>
+    <%= form.collection_select :tag_ids, @tags, :id, :name, {include_blank: true}, {multiple: true} %>
   </div>
 
   <div class="form-group">
@@ -52,3 +62,12 @@
     <% end %>
   </div>
 <% end %>
+
+<script>
+  $(document).on('ready page:load', function () {
+    $('#lesson_tag_ids').chosen({
+      allow_single_deselect: true,
+      width: '100%'
+    })
+  });
+</script>

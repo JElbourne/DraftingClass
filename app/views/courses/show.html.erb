@@ -44,4 +44,6 @@
   </div>
 </div>
 
+<p><small>Tags: <%= raw @course.tags.map(&:name).map { |t| link_to t, courses_tag_path(t) }.join(', ') %></small</p>
+
 <%= render 'lessons/list', lessons: @lessons %>

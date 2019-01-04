@@ -84,6 +84,6 @@ class CoursesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def course_params
-      params.require(:course).permit(:name, :description, :price, :discount, :published, :image)
+      params.require(:course).permit(:name, :description, :price, :discount, :published, :image, :tag_list, :tag, { tag_ids: [] }, :tag_ids)
     end
 end

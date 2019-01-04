@@ -1,4 +1,5 @@
 class Course < ApplicationRecord
+    include Taggable
 
     scope :is_published, -> {where(published: true)}
 
@@ -17,5 +18,9 @@ class Course < ApplicationRecord
         else
             nil
         end
+    end
+
+    def self.tagged_with(name)
+        Tag.find_by!(name: name).courses
     end
 end

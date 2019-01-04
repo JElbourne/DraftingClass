@@ -33,7 +33,11 @@ Rails.application.routes.draw do
   get '/answers', to: 'home#answers'
   get '/community', to: 'home#community'
 
+  get 'courses/tagged/:tag', to: 'courses#index', as: :courses_tag
+  get 'lessons/tagged/:tag', to: 'lessons#index', as: :lessons_tag
+
   post '/newsletter', to: 'mailchimp#newsletter', as: 'newsletter'
+
 
   resources :notifications, only: [:index]
   resources :announcements, only: [:index]

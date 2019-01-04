@@ -137,6 +137,7 @@ describe 'Lesson', type: :feature do
             visit new_course_lesson_url(Course.last.id)
             fill_in 'lesson_title', with: 'New lesson'
             fill_in 'lesson_transcript', with: 'This is a lesson'
+            fill_in 'lesson_length', with: 100
             fill_in 'lesson_video_url', with: 'youtube.com'
             click_button 'Create Lesson'
 

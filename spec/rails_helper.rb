@@ -93,4 +93,8 @@ RSpec.configure do |config|
     config.block_unknown_urls
   end
 
+  FactoryBot::SyntaxRunner.class_eval do
+    include ActionDispatch::TestProcess
+  end
+
 end

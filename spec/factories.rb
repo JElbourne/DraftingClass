@@ -1,5 +1,4 @@
 FactoryBot.define do
-
     factory :user do
       first_name {"Joe"}
       last_name {"Fresh"}
@@ -14,6 +13,7 @@ FactoryBot.define do
         price {49}
         discount {0}
         published { false }
+        image { fixture_file_upload(Rails.root.join('spec', 'support', 'assets', 'test-image.png'), 'image/png') }
     end
 
     factory :student do
@@ -36,8 +36,19 @@ FactoryBot.define do
       course
       title {"Lesson"}
       transcript {"This is a lesson"}
+      length {100}
       video_url {"http://youtube.com/1234kjhg234khg234"}
       published { false }
+      image { fixture_file_upload(Rails.root.join('spec', 'support', 'assets', 'test-image.png'), 'image/png') }
+    end
+    
+    factory :tag do
+      name { "MyString" }
+    end
+
+    factory :tagging do
+      tag
+      taggable { lesson }
     end
 
   end

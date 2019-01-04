@@ -72,7 +72,7 @@ class LessonsController < ApplicationController
     def set_lesson
 
       if is_admin?
-        @lesson = Lesson.find(params[:id])
+        @lesson = Lesson.find_by_id(params[:id])
       else
         @lesson = Lesson.get_by_id_if_published(params[:id])
       end
@@ -92,6 +92,6 @@ class LessonsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def lesson_params
-      params.require(:lesson).permit(:course_id, :title, :transcript, :video_url, :published, :image)
+      params.require(:lesson).permit(:course_id, :title, :transcript, :length, :video_url, :published, :image, :tag_list, :tag, { tag_ids: [] }, :tag_ids)
     end
 end

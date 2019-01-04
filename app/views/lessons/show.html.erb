@@ -24,3 +24,5 @@
   <dd><%= @lesson.video_url %></dd>
 
 </dl>
+
+<p><small>Tags: <%= raw @lesson.tags.map(&:name).map { |t| link_to t, lessons_tag_path(t) }.join(', ') %></small</p>

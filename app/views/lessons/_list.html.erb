@@ -9,22 +9,22 @@
       
       <div class="card shadow-sm shadow--hover mb-5 episode" id="episode_279">
         <%= link_to lesson_path(lesson), class: "d-block episode-thumbnail" do %>
-          <%= image_tag lesson.image, class: "card-img-top", alt: lesson.title %>
+          <%= image_tag url_for(lesson.image), class: "card-img-top", alt: "Lesson #{lesson.title} Image" %>
           <span class="episode-length"><%= lesson.length %></span>
         <% end %>
         
         <div class="card-body">
           <%= link_to lesson.title, lesson_path(lesson), class: "h5 lh-150 text-info--hover" %>
             <h6 class="text-muted text-sm mt-3 mb-0">
-              #277
-              ·
               <time datetime="2018-12-26T06:00:00Z" data-local="time" data-format="%b %d, %Y" title="December 26, 2018 at 1:00am EST" data-localized="" aria-label="Dec 26, 2018">Dec 26, 2018</time>
             </h6>
             <p class="mt-1 mb-0 lh-150">
               <%= lesson.transcript %>
             </p>
         </div>
-
+          <div class="card-footer">
+          <p><small>Tags: <%= raw lesson.tags.map(&:name).map { |t| link_to t, tag_path(t) }.join(', ') %></small</p>
+          </div>
       </div>
     </div>
     <% if index % 2 != 0 %>

@@ -5,3 +5,11 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Tag.create(name: "Wall")
+Tag.create(name: "Roof")
+Tag.create(name: "Foundation")
+Tag.create(name: "Footing")
+Tag.create(name: "Window")
+Tag.create(name: "Door")
+Tag.create(name: "Floor")

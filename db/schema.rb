@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_12_29_002307) do
+ActiveRecord::Schema.define(version: 2019_01_02_205948) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -80,6 +80,7 @@ ActiveRecord::Schema.define(version: 2018_12_29_002307) do
     t.bigint "course_id"
     t.string "title", null: false
     t.text "transcript", null: false
+    t.integer "length", null: false
     t.string "video_url", null: false
     t.boolean "published", default: false
     t.datetime "created_at", null: false
@@ -137,6 +138,22 @@ ActiveRecord::Schema.define(version: 2018_12_29_002307) do
     t.index ["user_id"], name: "index_students_on_user_id"
   end
 
+  create_table "taggings", force: :cascade do |t|
+    t.bigint "tag_id"
+    t.string "taggable_type"
+    t.bigint "taggable_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["tag_id"], name: "index_taggings_on_tag_id"
+    t.index ["taggable_type", "taggable_id"], name: "index_taggings_on_taggable_type_and_taggable_id"
+  end
+
+  create_table "tags", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -161,4 +178,5 @@ ActiveRecord::Schema.define(version: 2018_12_29_002307) do
   add_foreign_key "services", "users"
   add_foreign_key "students", "courses"
   add_foreign_key "students", "users"
+  add_foreign_key "taggings", "tags"
 end

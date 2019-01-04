@@ -3,6 +3,7 @@ class ApplicationController < ActionController::Base
 
   before_action :configure_permitted_parameters, if: :devise_controller?
   before_action :masquerade_user!
+  before_action :get_tags
 
   helper_method :is_admin?
 
@@ -21,5 +22,9 @@ class ApplicationController < ActionController::Base
 
     def is_admin?
       user_signed_in? && current_user.admin?
+    end
+
+    def get_tags
+      @tags = Tag.order(:name)
     end
 end
