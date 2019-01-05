@@ -48,7 +48,7 @@ FactoryBot.define do
 
     factory :tagging do
       tag
-      taggable { lesson }
+      association :taggable, factory: :lesson
     end
 
   end
