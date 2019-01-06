@@ -151,13 +151,6 @@ describe 'Course', type: :feature do
            
             visit new_course_url
             expect(current_path).to eq new_course_path
-
-            visit courses_url
-            expect(page).to have_content('Add New Course')
-
-            click_link "Add New Course"
-            expect(current_path).to eq new_course_path
-
         end
     end
 

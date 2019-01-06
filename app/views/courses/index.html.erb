@@ -1,17 +1,24 @@
+<div class="container py-5">
+  <div class="row">
+    <div class="col-md-6">
+      <h1 class="h4 mb-5">Courses</h1>
+    </div>
 
-
-<div class="container">
-<div class="row">
-  <div class="col-sm-6">
-    <h1>Courses</h1>
-  </div>
-
-  <div class="col-sm-6 text-right">
-    <% if is_admin? %>
-      <%= link_to new_course_path, class: 'btn btn-primary' do %>
-        Add New Course
+    <div class="col-md-6">
+      <%= form_with(url: courses_path, local: true, method: :get) do |form| %>
+        <div class="form-group mb-0">
+          <div class="input-group input-group-transparent">
+            <%= form.text_field :course_search, type: "search", class: 'form-control  form-control-sm', placeholder: "Search by name..." %>
+            <div class="input-group-append">
+              <button name="button" type="submit" class="btn btn-sm btn-primary">
+                <i class="fas fa-search mr-3"></i>
+                Search
+              </button>
+            </div>
+          </div>
+        </div>
       <% end %>
-    <% end %>
+    </div>
   </div>
 </div>
 

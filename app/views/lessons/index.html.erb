@@ -5,11 +5,12 @@
     </div>
 
     <div class="col-md-6">
-      <form class="lesson_search" id="lesson_search" action="/episodes" accept-charset="UTF-8" method="get">
+      <%= form_with(url: lessons_path, local: true, method: :get) do |form| %>
+
         <input name="utf8" type="hidden" value="✓">
         <div class="form-group mb-0">
           <div class="input-group input-group-transparent">
-            <input placeholder="Search by name..." class="form-control form-control-sm" type="search" name="q[name_or_description_cont]" id="q_name_or_description_cont">
+            <%= form.text_field :lesson_search, type: "search", class: 'form-control  form-control-sm', placeholder: "Search by name..." %>
             <div class="input-group-append">
               <button name="button" type="submit" class="btn btn-sm btn-primary">
                 <i class="fas fa-search mr-3"></i>
@@ -18,7 +19,7 @@
             </div>
           </div>
         </div>
-      </form>
+      <% end %>
     </div>
   </div>
 </div>
